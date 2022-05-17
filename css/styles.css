@@ -645,6 +645,30 @@ ul {
     border: 1px solid var(--box-shadow-color5);
     border-radius: 50%;
     cursor: pointer;
+
+    transition: color 250ms var(--timing);
+}
+
+.close-btn:hover,
+.close-btn:focus,
+.input-box:hover ,
+.input-box:focus,
+.input-box:focus-within {
+    color: var(--accent-color);
+}
+
+.input-box:hover .input-area,
+.input-box:focus .input-area,
+.input-area:focus,
+.textarea:hover,
+.textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+
+.close-btn-icon {
+    fill: currentColor;
 }
 
 /* Форма модального окна */
@@ -675,6 +699,9 @@ ul {
     height: 40px;
     width: 100%;
     bottom: 0;
+    color: var(--header-color);
+
+    transition: color 250ms var(--timing);
 }
 
 /* Текст метки */
@@ -684,6 +711,7 @@ ul {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
+    color: var(--text-color);
     transform: translateY(-100%);
 }
 
@@ -691,8 +719,11 @@ ul {
 .input-area {
     width: 100%;
     height: 100%;
+    padding-left: 42px;
+    color: var(--text-color);
     border: 1px solid var(--input-border-color);
     border-radius: 4px;
+    transition: border-color 250ms var(--timing);
 }
 
 /* Иконка формы */
@@ -701,8 +732,9 @@ ul {
     top: 50%;
     left: 12px;
     transform: translateY(-50%);
-    color: var(--header-color);
+    fill: currentColor;
 }
+
 
 /* Блок комметария */
 .form-comment {
@@ -726,6 +758,11 @@ ul {
     border: 1px solid var(--input-border-color);
     border-radius: 4px;
     resize: none;
+    transition: border-color 250ms var(--timing);
+}
+
+.textarea:focus {
+    color: var(--text-color);
 }
 
 /* Форма соглашения */
@@ -747,6 +784,16 @@ ul {
     fill: var(--bg-color);
     border: 2px solid var(--header-color);
     border-radius: 2px;
+
+    /* transition: t; */
+
+}
+
+
+.checkbox:checked + .check-icon {
+    border-color: transparent;
+    background-color: var(--accent-color);
+    background-origin: border-box;  
 }
 
 /* Кнопка отправки данных */
