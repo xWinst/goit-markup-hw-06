@@ -208,7 +208,8 @@ ul {
 
 /* Кнопка */
 .hero-button,
-.summit-btn {
+.summit-btn,
+.subscribe-btn {
     width: 200px;
     height: 50px;
     font-family: Roboto, sans-serif;
@@ -436,7 +437,8 @@ ul {
     margin-top: 5px;
 }
 
-.footer-social-text {
+.footer-social-text,
+.subscride-form-text {
     margin-bottom: 20px;
     font-weight: 700;
     line-height: 1.14;
@@ -590,7 +592,7 @@ ul {
     transform: translateY(0);
 }
 
-/* Модальное окно */
+/* Фон для модального окна */
 .backdrop {
     position: fixed;
     top: 0;
@@ -603,17 +605,20 @@ ul {
     transition: opacity 250ms var(--timing), visibility 250ms var(--timing);
 }
 
+/* Скрываем фон для модалки */
 .backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
 
+/* Модальное окно когда скрыто */
 .backdrop.is-hidden .modal {
     opacity: 0.6;
     transform: translate(-50%, -50%) scale(0.4);
 }
 
+/* Модальное окно */
 .modal {
     position: absolute;
     top: 50%;
@@ -629,7 +634,6 @@ ul {
 }
 
 /* Кнопка закрытия */
-
 .close-btn {
     position: absolute;
     top: 8px;
@@ -683,6 +687,7 @@ ul {
     transform: translateY(-100%);
 }
 
+/* Поле ввода */
 .input-area {
     width: 100%;
     height: 100%;
@@ -699,17 +704,20 @@ ul {
     color: var(--header-color);
 }
 
+/* Блок комметария */
 .form-comment {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
 }
 
+/* Метка комментария */
 .comment-label {
     display: block;
     margin-bottom: 4px;
 }
 
+/* Поле для комментария */
 .textarea {
     width: 100%;
     height: 120px;
@@ -720,6 +728,7 @@ ul {
     resize: none;
 }
 
+/* Форма соглашения */
 .form-agreement {
     margin-top: 20px;
     display: flex;
@@ -727,10 +736,12 @@ ul {
     justify-content: center;
 }
 
+/* Ссылка на условия договора */
 .conditions {
     color: var(--accent-color);
 }
 
+/* Иконка для чек-бокса */
 .check-icon {
     margin-right: 8px;
     fill: var(--bg-color);
@@ -738,7 +749,46 @@ ul {
     border-radius: 2px;
 }
 
+/* Кнопка отправки данных */
 .summit-btn {
     margin: 30px auto 0;
     display: block;
+}
+
+/* Кнопка для подписки */
+.subscribe-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Иконка в кнопке для подписки */
+.subscribe-btn-icon {
+    margin-left: 10px;
+}
+
+/* Форма для рассылки */
+.subscride-form {
+    margin-left: 93px;
+    padding-top: 12px;
+}
+
+/* Блок для рассылки */
+.subscride-thumb {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Поле ввода для e-mail */
+.subscribe-email {
+    width: 358px;
+    margin-right: 12px;
+    padding-left: 16px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--secondary-contact-color);
+    background-color: var(--additional-bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px var(--box-shadow-color1));
+    border-radius: 4px;
 }
